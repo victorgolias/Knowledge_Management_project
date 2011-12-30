@@ -1,5 +1,5 @@
 set :application, "taxonomia"
-set :repository, "cesta_k_vasemu_repositari"
+set :repository, "https://github.com/victorgolias/Knowledge_Management_project"
 set :scm, "git"
 
 role :web, "server3.railshosting.cz"
