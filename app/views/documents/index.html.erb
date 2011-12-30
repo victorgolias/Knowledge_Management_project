@@ -1,0 +1,38 @@
+    <div >
+      <div class="headerDocs">
+        <h2>Dokumenty (<%= @documents.length %>)</h2>
+      </div>
+
+      <div class="tableDocs">
+      <table>
+        <% if @documents.length == 0 %>
+            <p>Kategória neobsahuje dokumenty</p>
+        <% else %>
+        <tr id="columns_names_separator">
+          <td><b>Názov dokumentu</b></td>
+          <td><b>Popis dokumentu</b></td>
+          <td><b>Akcie nad dokumentom</b></td>
+        </tr>
+        <% @documents.each do |document| %>
+            <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
+              <td>
+                <b class="docName"><%= document.name %></b>
+              </td>
+              <td >
+                <%= document.description %>
+              </td>
+              <td class="list_actions" >
+                <%= link_to 'Show', document %><br/>
+                <%= link_to 'Edit', edit_document_path(document) %><br/>
+                <%= link_to 'Destroy', document,
+                            :confirm => 'Are you sure?',
+                            :method => :delete %>
+              </td>
+            </tr>
+        <% end %>
+        <% end %>
+      </table>
+        </div>
+    </div>
+    <br />
+    <!-- <%= link_to 'New document', new_document_path %> -->

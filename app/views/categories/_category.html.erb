@@ -1,0 +1,13 @@
+<li class="collapsibleList">
+  <%= link_to h(category.name),
+              :controller => 'documents',
+              :action => 'index', :id => category.id %>
+  <% if category.children.empty? %>
+
+  <% else %>
+      <ul>
+        <%= render :partial => 'categories/category',
+                   :collection => category.children %>
+      </ul>
+  <% end %>
+</li>

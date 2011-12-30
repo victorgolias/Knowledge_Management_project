@@ -1,0 +1,80 @@
+.field{
+    margin-top: 15px;
+}
+.field b{
+    font-size: 15px;
+}
+
+.actions{
+    margin-top: 20px;
+    background: url('../images/action_button.png') no-repeat;
+}
+
+#error_explanation{
+    color: #ff0000;
+}
+
+#error_explanation h2{
+    color: #E32636;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.list_line_odd td{
+    background: #e4dce5;
+    border-bottom: 2px;
+
+}
+
+#columns_names_separator{
+    border-bottom: 1px #E32636;
+    height: 15px;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.header{
+    background: url("../images/header_bg.png");
+    height: 100px;
+}
+
+.headerDocs{
+    background: url("../images/header_bg.png");
+    width: auto;
+    height: 100px;
+}
+
+.header h2{
+    margin-left: 25px;
+    padding-top: 50px;
+    color: #ffffff;
+}
+
+.headerDocs h2{
+    padding-top: 50px;
+    color: #ffffff;
+}
+
+.tableDocs{
+    margin-left: 25px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.tableDocs{
+    width: 100%;
+    display: table-row;
+}
+
+.docName{
+    font-size: 15px;
+}
+
+#placeholder{
+    width: 100%;
+}
+
+#placeholder a{
+    width: 113px;
+    height: 35px;
+}

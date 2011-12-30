@@ -1,0 +1,27 @@
+<div class="headerDocs">
+  <h2><%= @document.name %></h2>
+</div>
+
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Name:</b>
+  <%= @document.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @document.description %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= Category.find(@document.category_id).name %>
+</p>
+
+<p>
+  <b>File URL:</b>
+  <%=link_to @document.file_name,:url => @document.file_name %>
+</p>
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', @documents_path %>

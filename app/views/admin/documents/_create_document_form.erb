@@ -1,0 +1,14 @@
+<%= semantic_form_for [:admin, @document], :html => { :multipart => true } do |f| %>
+
+    <%= f.inputs "Managing documents" do %>
+        <%= f.input :name %>
+        <%= f.input :description%>
+        <%= f.input :category_id, :label => "Select categories",:as => :select, :collection => Category.all %>
+        <%= f.input :file_name, :label => "Specify URL of file", :required => true, :as => :url %>
+
+    <% end %>
+    <%= f.buttons do %>
+        <%= f.submit %>
+    <% end %>
+
+<%end%>

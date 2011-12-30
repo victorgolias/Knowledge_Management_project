@@ -1,0 +1,11 @@
+<%= semantic_form_for [:admin, @hierarchy] do |f| %>
+
+    <%= f.inputs "Create multiple hierarchies" do %>
+        <%= f.input :name, :label => "Name of hierarchy" %>
+    <% end %>
+    <%= f.buttons do %>
+        <li class="save">
+            <%= f.submit "Create Hierarchy" %>
+        <li>
+    <% end %>
+<%end%>

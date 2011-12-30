@@ -1,0 +1,33 @@
+<%= form_for(@document) do |f| %>
+  <% if @document.errors.any? %>
+    <div id="error_explanation">
+      <h2>Počet chýb: <%= @document.errors.count %>, nie je možné uložiť vytvorený objekt </h2>
+
+      <ul>
+      <% @document.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <b><%= f.label :name %></b><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <b><%= f.label :description %></b><br />
+    <%= f.text_area :description%>
+  </div>
+  <div class="field">
+    <b><%= f.label :category_id %></b><br/>
+    <%= collection_select(:category, :document_id, Category.all, :id, :name )%>
+  </div>
+  <div class="field">
+    <b><%= f.label :file_name %></b><br />
+    <%= f.text_field :file_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

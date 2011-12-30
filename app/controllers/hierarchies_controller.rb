@@ -1,0 +1,2 @@
+class HierarchyController < ApplicationController
+end

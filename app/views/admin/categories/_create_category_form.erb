@@ -1,0 +1,14 @@
+<%= semantic_form_for [:admin, @hierarchy, @category] do |f| %>
+
+
+    <%= f.inputs "Hierarchies and Categories" do %>
+        <%= f.input :name %>
+        <%= f.input :parent_id, :label => "Category", :as => :select, :collection => Category.all %>
+        <p style="margin-left: 267px"> If you don't specify Category, it will create <b>Hierarchy</b> object, that is on root level</p>
+
+    <% end %>
+    <%= f.buttons do %>
+        <%= f.submit %>
+    <% end %>
+
+<%end%>
